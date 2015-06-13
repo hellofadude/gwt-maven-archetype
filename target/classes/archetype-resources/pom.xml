@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+     
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
+    <packaging>war</packaging>     
+    <name>GWT</name>
+    
+    <!-- Basic build settings! -->
+    
+    <build>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.3</version>
+          <configuration>
+            <source>1.7</source>
+            <target>1.7</target>
+          </configuration>
+        </plugin>
+      </plugins>
+    </build>
+    
+    <!-- Basic dependency settings! -->
+    <dependencies>
+       <dependency>
+         <groupId>com.google.gwt</groupId>
+         <artifactId>gwt-user</artifactId>
+         <version>2.7.0</version>
+      </dependency>
+      <dependency>
+         <groupId>com.google.gwt</groupId>
+         <artifactId>gwt-dev</artifactId>
+         <version>2.7.0</version>
+      </dependency>
+      <dependency>
+         <groupId>com.google.gwt</groupId>
+         <artifactId>gwt-codeserver</artifactId>
+         <version>2.7.0</version>
+      </dependency>
+      <dependency>
+         <groupId>com.google.gwt</groupId>
+         <artifactId>gwt-servlet</artifactId>
+         <version>2.7.0</version>
+      </dependency>
+      <dependency>
+         <groupId>com.google.gwt</groupId>
+         <artifactId>gwt-elemental</artifactId>
+         <version>2.7.0</version>
+      </dependency>
+      <dependency>
+          <groupId>com.google.web.bindery</groupId>
+          <artifactId>requestfactory</artifactId>
+          <version>2.7.0</version>
+          <type>pom</type>
+          <scope>import</scope>
+      </dependency>
+      <dependency>
+           <groupId>javax.validation</groupId>
+           <artifactId>validation-api</artifactId>
+           <version>1.0.0.GA</version>
+      </dependency>
+      <dependency>
+           <groupId>javax.validation</groupId>
+           <artifactId>validation-api</artifactId>
+           <version>1.0.0.GA</version>
+  <!-- Note: use classifier=sources rather than type=java-sources so they're added to the classpath -->
+           <classifier>sources</classifier>
+       </dependency>
+       <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-parent</artifactId>
+            <version>5.0.3</version>
+            <type>pom</type>
+            <scope>import</scope>
+       </dependency>
+    </dependencies>
+</project>
